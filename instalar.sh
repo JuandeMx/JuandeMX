@@ -107,6 +107,15 @@ echo "/etc/VPS-MX/menu" > /usr/bin/menu && chmod +x /usr/bin/menu
 echo "/etc/VPS-MX/menu" > /bin/VPSMX && chmod +x /bin/VPSMX
 echo "/etc/VPS-MX/menu" > /usr/bin/VPSMX && chmod +x /usr/bin/VPSMX
 
+# Crear comando SPR (Soporte Remoto)
+echo -e "#!/bin/bash\nwget https://www.dropbox.com/s/b9uktqipi8vu8ww/SOPORTE.sh -O /usr/bin/SOPORTE > /dev/null 2>&1\nchmod +x /usr/bin/SOPORTE > /dev/null 2>&1" > /usr/bin/SPR
+chmod +x /usr/bin/SPR
+
+# Asegurar que el archivo de idioma existe y tiene permisos
+touch /etc/VPS-MX/idioma
+echo "es" > /etc/VPS-MX/idioma
+chmod -R 777 /etc/VPS-MX
+
 # Iniciar el proxy WebSocket en puerto 80
 nohup python3 /etc/VPS-MX/protocolos/PDirect.py > /dev/null 2>&1 &
 
