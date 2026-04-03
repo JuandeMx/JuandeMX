@@ -1,0 +1,4 @@
+  File "/etc/VPS-MX/protocolos/ws.py", line 4
+    LISTENING_ADDR = " 0.0.0.0\
+                     ^
+SyntaxError: unterminated string literal (detected at line 5)
