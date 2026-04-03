@@ -50,7 +50,10 @@ echo -e "       ${GREEN}Dependencias instaladas correctamente${NC}"
 
 # --- PASO 3: Instalar panel VPS-MX ---
 echo -e "${GREEN}[3/8]${NC} Instalando panel VPS-MX..."
-cp -r "${SCRIPT_DIR}/VPS-MX" /etc/VPS-MX
+mkdir -p /etc/VPS-MX
+cp -rv "${SCRIPT_DIR}/VPS-MX/"* /etc/VPS-MX/
+# Agregar archivo de versión faltante
+echo "8.5" > /etc/versin_script_new
 chmod -R 755 /etc/VPS-MX
 # Limpiar IP cacheada para que detecte la nueva
 rm -f /etc/VPS-MX/MEUIPvps
