@@ -7,7 +7,7 @@ Este repositorio contiene una copia completa y funcional del panel VPS-MX, inclu
 Para instalar este panel en un VPS nuevo con Ubuntu, ejecuta el siguiente comando:
 
 ```bash
-apt update && apt install git -y && git clone https://github.com/USUARIO/REPO.git vps-mx && cd vps-mx && sudo bash instalar.sh
+apt update && apt install git -y && git clone https://github.com/JuandeMx/JuandeMx.git vps-mx && cd vps-mx && sudo bash instalar.sh
 ```
 
 > **Nota:** Reemplaza `USUARIO/REPO` con tu nombre de usuario y el nombre del repositorio donde subas estos archivos.
